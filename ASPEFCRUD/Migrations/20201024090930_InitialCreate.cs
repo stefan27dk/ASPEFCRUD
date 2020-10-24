@@ -2,7 +2,7 @@
 
 namespace ASPEFCRUD.Migrations
 {
-    public partial class Second : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,7 +12,7 @@ namespace ASPEFCRUD.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    ClassName = table.Column<string>(nullable: true)
+                    ClassName = table.Column<string>(type: "nvarchar(30)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -25,7 +25,7 @@ namespace ASPEFCRUD.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    FirstName = table.Column<string>(nullable: true),
+                    FirstName = table.Column<string>(type: "nvarchar(30)", nullable: true),
                     ClassId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>

@@ -35,8 +35,10 @@ namespace ASPEFCRUD
         public void ConfigureServices(IServiceCollection services) // This method gets called by the runtime. Use this method to add services to the container.
         {
             services.AddControllersWithViews();
+
+            //DB-Context Config
             services.AddDbContext<AppContext>(options =>
-        options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }
 
 
