@@ -67,6 +67,7 @@ namespace ASPEFCRUD.Controllers
 
 
         // Create - Function Method - Used int the - "Create.cshtml" 
+        // In the view <form asp-action="Create">
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,FirstName")] Student student)
